@@ -55,9 +55,10 @@ for message in clean_neg_messages:
 # Convert each message to a numeric representation of the frequency of neg. or pos. words.
 # TF = Term frequency
 clean_messages = processMessages(data.Message)
+sentiments = data.Emotion.tolist()
 
 cvector = CountVectorizer(stop_words='english',max_features=10000)
-cvector.fit_transform(clean_messages)
+X = cvector.fit_transform(clean_messages)
 
 neg_matrix = cvector.transform(data.Message[data.Emotion == 0])
 neu_matrix = cvector.transform(data.Message[data.Emotion == 2])
@@ -98,8 +99,22 @@ print(term_freq_df)
 # (2) linear models tend to perform well on sparse datasets like this one, 
 # (3) they learn very fast compared to other algorithms.
 
+# message_train, message_test, sentiments_train, sentiments_test = train_test_split(X, sentiments, train_size = 0.75, random_state=2)
+# accuracy = 0 
 
+# for c in [0.01, 0.05, 0.25, 0.35, 0.5, 0.75, 0.80, 0.95, 1]:
+#     lr = LogisticRegression(C=c)
+#     lr.fit(message_train, sentiments_train)
+#     accuracy_temp = accuracy_score(sentiments_test, lr.predict(message_test))
+#     print ("Accuracy for C=%s: %s" % (c, accuracy_temp))
+    
+#     if accuracy_temp > accuracy:
+#         accuracy = accuracy_temp
+#         C_value = c
 
+      
+     
+    
 
 
 
