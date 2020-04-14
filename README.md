@@ -39,4 +39,7 @@ pip3 install requirements.txt -r
  * Troubleshooting: <https://stackoverflow.com/>
  * Vectorization with text: <https://towardsdatascience.com/sentiment-analysis-with-python-part-1-5ce197074184> 
  * Normalizing data: < https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk>
- * remove words: <https://www.geeksforgeeks.org/removing-stop-words-nltk-python/>
+ * Remove words: <https://www.geeksforgeeks.org/removing-stop-words-nltk-python/>
+ * Logistic regression: <https://towardsdatascience.com/logistic-regression-explained-and-implemented-in-python-880955306060>
+ * Sentiment analysis: <https://www.kaggle.com/divsinha/sentiment-analysis-countvectorizer-tf-idf>
+ * CountVector: <https://www.kaggle.com/divsinha/sentiment-analysis-countvectorizer-tf-idf>
